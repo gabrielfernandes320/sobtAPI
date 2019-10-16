@@ -6,8 +6,8 @@ import javax.persistence.Entity;
 import java.util.List;
 
 @Entity
-@Table(name = "order_status")
-public class OrderStatus extends AuditModel{
+@Table(name = "item_type")
+public class ItemType extends AuditModel{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,27 +17,14 @@ public class OrderStatus extends AuditModel{
     private String description;
 
 
-    @OneToMany(mappedBy="orderStatus")
+    @OneToMany(mappedBy="itemType")
     private List<ServiceOrder> orders;
 
-
-    public OrderStatus(List<ServiceOrder> orders) {
-        this.orders = orders;
+    public ItemType() {
     }
 
-    public OrderStatus() {
-    }
-
-    public OrderStatus(String description, List<ServiceOrder> orders) {
+    public ItemType(String description, List<ServiceOrder> orders) {
         this.description = description;
-        this.orders = orders;
-    }
-
-    public List<ServiceOrder> getOrders() {
-        return orders;
-    }
-
-    public void setOrders(List<ServiceOrder> orders) {
         this.orders = orders;
     }
 
@@ -49,11 +36,19 @@ public class OrderStatus extends AuditModel{
         this.id = id;
     }
 
-    public String description() {
+    public String getDescription() {
         return description;
     }
 
-    public void description(String description) {
+    public void setDescription(String description) {
         this.description = description;
+    }
+
+    public List<ServiceOrder> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<ServiceOrder> orders) {
+        this.orders = orders;
     }
 }

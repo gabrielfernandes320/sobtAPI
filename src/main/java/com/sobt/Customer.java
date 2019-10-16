@@ -1,7 +1,10 @@
 package com.sobt;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
+import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.util.List;
@@ -9,15 +12,11 @@ import java.util.Set;
 
 @Entity
 @Table(name = "customer")
-public class Customer {
+public class Customer extends AuditModel {
+
     @Id
-    @GeneratedValue(generator = "customer_generator")
-    @SequenceGenerator(
-            name = "customer_generator",
-            sequenceName = "customer_sequence",
-            initialValue = 1
-    )
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
     private String name;
 
@@ -27,25 +26,25 @@ public class Customer {
 
     private String email;
 
-    @OneToMany(mappedBy="customer")
-    private List<ServiceOrder> orders;
+    @JsonIgnore
+    @OneToMany(fetch = FetchType.LAZY , mappedBy = "customer")
+    private Set<ServiceOrder> orders;
 
     public Customer() {
     }
 
-    public Customer(String name, String adress, String phone, String email, List<ServiceOrder> orders) {
+    public Customer(String name, String adress, String phone, String email) {
         this.name = name;
         this.adress = adress;
         this.phone = phone;
         this.email = email;
-        this.orders = orders;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -81,11 +80,11 @@ public class Customer {
         this.email = email;
     }
 
-    public List<ServiceOrder> getOrders() {
+    public Set<ServiceOrder> getOrders() {
         return orders;
     }
 
-    public void setOrders(List<ServiceOrder> orders) {
+    public void setOrders(Set<ServiceOrder> orders) {
         this.orders = orders;
     }
 }
