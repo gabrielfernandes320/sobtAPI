@@ -20,24 +20,11 @@ public class OrderStatus extends AuditModel{
     @OneToMany(mappedBy="orderStatus")
     private List<ServiceOrder> orders;
 
-
-    public OrderStatus(List<ServiceOrder> orders) {
-        this.orders = orders;
-    }
-
     public OrderStatus() {
     }
 
     public OrderStatus(String description, List<ServiceOrder> orders) {
         this.description = description;
-        this.orders = orders;
-    }
-
-    public List<ServiceOrder> getOrders() {
-        return orders;
-    }
-
-    public void setOrders(List<ServiceOrder> orders) {
         this.orders = orders;
     }
 
@@ -49,11 +36,19 @@ public class OrderStatus extends AuditModel{
         this.id = id;
     }
 
-    public String description() {
+    public String getDescription() {
         return description;
     }
 
-    public void description(String description) {
+    public void setDescription(String description) {
         this.description = description;
+    }
+
+    public List<ServiceOrder> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<ServiceOrder> orders) {
+        this.orders = orders;
     }
 }
