@@ -1,5 +1,6 @@
 package com.sobt;
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import javax.persistence.Entity;
@@ -16,7 +17,7 @@ public class ItemType extends AuditModel{
     @Column(name = "description")
     private String description;
 
-
+    @JsonIgnore
     @OneToMany(mappedBy="itemType")
     private List<ServiceOrder> orders;
 
