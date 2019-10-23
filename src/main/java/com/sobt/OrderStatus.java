@@ -12,7 +12,7 @@ public class OrderStatus extends AuditModel{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     @Column(name = "description")
     private String description;
@@ -29,11 +29,11 @@ public class OrderStatus extends AuditModel{
         this.orders = orders;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
