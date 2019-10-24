@@ -1,10 +1,10 @@
 # SOBT System  
 
-English:
+# English:
 
 System to register and controll service orders.
 
-# Requirements:
+Requirements:
 
 Frontend:
 
@@ -20,11 +20,11 @@ Database:
 
 The used database used was postgres, you need to create a database called sobt, in the first time that you run the backend hibernate will create all the tables needed.
 
-Português:
+# Português:
 
 Sistema para registrar e controlar ordens de serviço.
 
-# Requisitos:
+Requisitos:
 
 Frontend:
 
