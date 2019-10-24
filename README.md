@@ -42,8 +42,8 @@ Como o banco de dados usado foi o postgres, você precisa criar um banco de dado
 
 ![newClient](https://i.postimg.cc/vZvB5k7H/adicionarcliente.png)
 ![seeClients](https://i.postimg.cc/d1hVP0bL/verclientes.png)
-![newOrder](https://i.postimg.cc/HLsLzz30/novaordem.png)
-![seeOrders](https://i.postimg.cc/3RzJKTh9/visualize-Ordens.png)
+![newOrder](https://i.postimg.cc/ZY9cYtpN/novaordem.png)
+![seeOrders](https://i.postimg.cc/ryv9KnNP/visualize-Ordens.png)
 ![itemTypes](https://i.postimg.cc/6QjpmZ1k/tiposde-Itens.png)
 
 Contact:
