@@ -48,7 +48,7 @@ Como o banco de dados usado foi o postgres, você precisa criar um banco de dado
 
 Contact:
 
-gabrielfernandesfg@htomail.com
-gabrielfernandespfg@gmail.com
+* gabrielfernandesfg@hotmail.com
+* gabrielfernandespfg@gmail.com
 
 
