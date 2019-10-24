@@ -40,5 +40,5 @@ Para executar o sistema, você precisa clonar o back-end e executar com o comand
 
 Como o banco de dados usado foi o postgres, você precisa criar um banco de dados chamado sobt, na primeira vez em que executar o hibernate criará todas as tabelas necessárias.
 
-
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 
