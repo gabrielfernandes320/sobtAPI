@@ -33,18 +33,22 @@ public class ServiceOrder extends AuditModel{
     @Column(name = "item_name")
     private String itemName;
 
+    @Column(name = "item_brand")
+    private String itemBrand;
+
     @Column(name = "order_date")
     private Date orderDate;
 
     public ServiceOrder() {
     }
 
-    public ServiceOrder(Customer customer, OrderStatus orderStatus, ItemType itemType, String itemProblem, String itemName, Date orderDate) {
+    public ServiceOrder(Customer customer, OrderStatus orderStatus, ItemType itemType, String itemProblem, String itemName, String itemBrand, Date orderDate) {
         this.customer = customer;
         this.orderStatus = orderStatus;
         this.itemType = itemType;
         this.itemProblem = itemProblem;
         this.itemName = itemName;
+        this.itemBrand = itemBrand;
         this.orderDate = orderDate;
     }
 
@@ -102,5 +106,13 @@ public class ServiceOrder extends AuditModel{
 
     public void setOrderDate(Date orderDate) {
         this.orderDate = orderDate;
+    }
+
+    public String getItemBrand() {
+        return itemBrand;
+    }
+
+    public void setItemBrand(String itemBrand) {
+        this.itemBrand = itemBrand;
     }
 }

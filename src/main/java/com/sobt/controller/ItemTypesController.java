@@ -31,12 +31,12 @@ public class ItemTypesController {
         return itemTypeRepository.save(itemType);
     }
 
-    @DeleteMapping("/itemType/{id}")
+    @DeleteMapping("/itemTypes/{id}")
     public void deleteItemType (@PathVariable Long id){
         itemTypeRepository.deleteById(id);
     }
 
-    @PutMapping("/itemType/{id}")
+    @PutMapping("/itemTypes/{id}")
     public ItemType updateItemType(@PathVariable Integer id, @RequestBody ItemType itemType){
         return itemTypeRepository.save(itemType);
 
