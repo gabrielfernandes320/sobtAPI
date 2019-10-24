@@ -39,3 +39,6 @@ Para executar o sistema, você precisa clonar o back-end e executar com o comand
 Base de dados:
 
 Como o banco de dados usado foi o postgres, você precisa criar um banco de dados chamado sobt, na primeira vez em que executar o hibernate criará todas as tabelas necessárias.
+
+
+
